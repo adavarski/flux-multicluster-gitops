@@ -31,6 +31,8 @@ kind/load.sh
 
 # bootstrap Calico for Flux
 kubectl apply --context kind-cluster0 -k ./config/cluster0/kube-system
+kubectl apply --context kind-cluster1 -k ./config/cluster0/kube-system
+kubectl apply --context kind-cluster2 -k ./config/cluster0/kube-system
 
 GITHUB_USER=adavarski
 # set your own user here to match your fork
