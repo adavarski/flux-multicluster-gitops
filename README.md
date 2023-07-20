@@ -23,7 +23,7 @@ Fork this repo and try it out :)
    - kind
    - kubectl
 
-## Let's go
+## Demo
 
 ```shell
 kind/setup.sh
