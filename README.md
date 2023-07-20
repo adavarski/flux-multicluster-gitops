@@ -39,11 +39,26 @@ GITHUB_USER=adavarski
 
 export GITHUB_TOKEN="<personal access token with repo and SSH key rights>"
 
+kubectl config use-context kind-cluster0
 flux bootstrap github \
   --owner "${GITHUB_USER}" \
   --personal \
   --repository "flux-multicluster-gitops" \
   --path "./config/cluster0"
+
+kubectl config use-context kind-cluster1
+flux bootstrap github \
+  --owner "${GITHUB_USER}" \
+  --personal \
+  --repository "flux-multicluster-gitops" \
+  --path "./config/cluster1"
+
+kubectl config use-context kind-cluster2
+flux bootstrap github \
+  --owner "${GITHUB_USER}" \
+  --personal \
+  --repository "flux-multicluster-gitops" \
+  --path "./config/cluster2"
 ```
 alternatively, if you want to not use github & flux, apply the `kube-system` and `default` kustomizations to the proper clusters:
 ```shell
