@@ -16,12 +16,11 @@ A neat thing about this strategy is that it's declarative!
 Fork this repo and try it out :)
 
 ## Requirements:
-   - git
-   - hub (optional)
-   - flux
-   - docker
-   - kind
-   - kubectl
+   - [hub (optional)](https://cli.github.com/manual/installation)
+   - [flux](https://fluxcd.io/flux/installation/)
+   - [docker](https://docs.docker.com/engine/install/)
+   - [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
+   - [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
 ## Demo
 
