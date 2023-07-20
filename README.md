@@ -1,4 +1,4 @@
-# multi-cluster mesh routing /w GitOps
+## Multi-cluster mesh routing /w GitOps
 This demo will build you 3 clusters that will all
 share their routing information with each other and
 forward DNS for cross-cluster Services.
@@ -16,8 +16,6 @@ A neat thing about this strategy is that it's declarative!
 Fork this repo and try it out :)
 
 ## Requirements:
-1. your computer
-2. these tools
    - git
    - hub (optional)
    - flux
@@ -26,12 +24,6 @@ Fork this repo and try it out :)
    - kubectl
 
 ## Let's go
-```shell
-hub clone adavarski/flux-multicluster-gitops
-cd multicluster-gitops
-hub fork
-  # alternatively fork in the web UI and clone
-```
 
 ```shell
 kind/setup.sh
@@ -40,7 +32,7 @@ kind/load.sh
 # bootstrap Calico for Flux
 kubectl apply --context kind-cluster0 -k ./config/cluster0/kube-system
 
-GITHUB_USER=stealthybox
+GITHUB_USER=adavarski
 # set your own user here to match your fork
 
 export GITHUB_TOKEN="<personal access token with repo and SSH key rights>"
@@ -68,7 +60,7 @@ done
 - Try curling the service from and to different clusters!
 
 
-## Tidying Up
+## Clean Up
 ```shell
 kind/cleanup.sh
 ```
@@ -77,4 +69,4 @@ ____
 
 
 ## More demos!
-Check out this next demo featuring Flux's GPG signature verification and remote-cluster management over Cluster API: [stealthybox/capi-flux-demo](https://github.com/stealthybox/capi-flux-demo) 
+Flux's GPG signature verification and remote-cluster management over Cluster API: https://github.com/stealthybox/capi-flux-demo
