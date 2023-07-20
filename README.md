@@ -85,5 +85,5 @@ kind/cleanup.sh
 ____
 
 
-## More demos!
+## More demos:
 Flux's GPG signature verification and remote-cluster management over Cluster API: https://github.com/stealthybox/capi-flux-demo
