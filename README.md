@@ -52,7 +52,7 @@ done
 
 ## Looking around
 - Get the `Kustomization` resources the cluster0 flux-system uses to apply to the other clusters
-- Use the `kubectl --context` flag to switch between `kind-cluster0|1|2` on demand
+- Use the `kubectl config use-context kind-{cluster0|cluster1|cluster2}` to switch between `kind-cluster0|1|2` on demand
 - Check that the serf and calico dameonsets and deploys become ready
 - Check out the Corefile ConfigMap extensions in kube-system
 - Examine the `BGPPeer` resources that the serf-query controller created from the serf member list
